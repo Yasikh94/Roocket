@@ -13,11 +13,11 @@ const Home: NextPage = () => {
       </Head>
 
       <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
+        <h1 className="text-red-800 text-3xl">
+          Hi everyone
         </h1>
 
-        <p className={styles.description}>
+        <p className="text-green-900 text-3xl">
           Get started by editing{' '}
           <code className={styles.code}>pages/index.tsx</code>
         </p>
