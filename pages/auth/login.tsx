@@ -3,6 +3,7 @@
 import type { NextPage } from "next"
 import LoginForm from "../../app/auth/loginForm"
 import { useCookies } from "react-cookie"
+import { useRouter } from "next/navigation"
 
 
 
@@ -10,11 +11,12 @@ import { useCookies } from "react-cookie"
 
 const Login: NextPage = () => {
 
-  const [cookies,setCookies] = useCookies (['target-token'])
+    const [cookies,setCookies] = useCookies (['target-token'])
+    const router = useRouter();
 
     return (
     <>
-      
+
       <div className="min-h-full flex flex-col justify-center py-12 sm:px-6 lg:px-8">
         <div className="sm:mx-auto sm:w-full sm:max-w-md">
           <img
@@ -29,9 +31,9 @@ const Login: NextPage = () => {
 
         <div className="mt-8 sm:mx-auto sm:w-full sm:max-w-md">
           <div className="bg-white py-8 px-4 shadow sm:rounded-lg sm:px-10">
-           < LoginForm  setCookies ={setCookies} />
+           < LoginForm  setCookies ={setCookies} router={router} />
            </div>
-          </div>     
+          </div>
       </div>
     </>
   )
